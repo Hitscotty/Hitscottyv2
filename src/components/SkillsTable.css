@@ -1,0 +1,36 @@
+.center {
+    margin: auto;
+  }
+
+  a{
+    color: black;
+  }
+
+  a:hover{
+    color:blue;
+  }
+
+  i:hover{
+    color: yellow;
+  }
+
+  .devicon-github-plain:hover{
+    color: black;
+  }
+
+  .equal-spacing{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media only screen and (max-device-width: 480px) {
+
+    #projects.content{
+      color: white;
+    }
+
+    #projects .links, #projects table{
+      visibility: hidden;      
+    }
+	}
