@@ -47,6 +47,10 @@ export default class Skills extends Component {
     }
     render() {
 
+        if (!this.props.skills) {
+            return null
+        }
+
         const skillsections = this
             .props
             .skills

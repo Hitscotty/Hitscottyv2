@@ -17,8 +17,12 @@ function Ellipses(props) {
 }
 
 function TimeLineBlock(props) {
+    let parallax = "timeline-block"
+    if (props.parallax) {
+        parallax = "parallax " + parallax;
+    }
     return (
-        <div className="timeline-block">
+        <div className={parallax}>
             <div className="timeline-dot">
                 <h6>{props.abrv}</h6>
             </div>
@@ -58,6 +62,7 @@ export default class Experience extends Component {
 
                         <TimeLineBlock
                             abrv="L"
+                            parallax="true"
                             title="Lehman College"
                             subtitle="senior college of the City University of New York"
                             hiatus="Sep 2012 - Jun 2016"
@@ -79,6 +84,7 @@ export default class Experience extends Component {
 
                         <TimeLineBlock
                             abrv="O"
+                            parallax="true"
                             title="Online Computers"
                             subtitle="Software Engineer"
                             hiatus="Mar 2017 - Present"

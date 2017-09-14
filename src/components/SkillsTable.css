@@ -26,8 +26,13 @@
 
   @media only screen and (max-device-width: 480px) {
 
+    #projects{
+      visibility: hidden;   
+      display: none;   
+    }
+
     #projects.content{
-      color: white;
+      visibility: hidden;      
     }
 
     #projects .links, #projects table{

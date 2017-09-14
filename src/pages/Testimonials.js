@@ -3,6 +3,21 @@ import testimonialicon from '../images/icons/handshake.png'
 import jesus from '../images/clients/jesus.jpg'
 import Swiper from 'swiper';
 
+function Review(props) {
+    return (
+        <div className="swiper-slide">
+            <div className="col-md-12">
+                <div className="client-img center-block">
+                    <img alt="testimonial" className="center-block" src={props.src}/>
+                </div>
+                <blockquote>
+                    {props.review}
+                    <cite>{props.author}</cite>
+                </blockquote>
+            </div>
+        </div>
+    )
+}
 export default class Testimonials extends Component {
 
     componentDidMount() {
@@ -15,9 +30,14 @@ export default class Testimonials extends Component {
             paginationClickable: true
         });
     }
-    render() {
-        return (
 
+    render() {
+
+        if (!this.props.src) {
+            return null;
+        }
+
+        return (
             <section id="testimonials" className="section">
                 <div className="container">
                     <div className="section-title">
@@ -28,55 +48,11 @@ export default class Testimonials extends Component {
 
                             <div id="clients-slider" className="swiper-container swiper-container-clients">
                                 <div className="swiper-wrapper">
-                                    <div className="swiper-slide">
-                                        <div className="col-md-12">
-                                            <div className="client-img center-block">
-                                                <img alt="testimonial" className="center-block" src={jesus}/>
-                                            </div>
-                                            <blockquote>
-                                                I work with John on several web development projects and I find him to be
-                                                extremely creative and a technical Front End Developer. Jone expertise involves
-                                                building complex Responsive Design layouts using HTML 5, CSS3, and JavaScript. I
-                                                work with John on several web development projects and I find him to be
-                                                extremely creative and a technical Front End Developer. Jone expertise involves
-                                                building complex Responsive Design layouts using HTML 5, CSS3, and JavaScript.
-                                                <cite>Mike, CEO, IT World.</cite>
-                                            </blockquote>
-                                        </div>
-                                    </div>
-
-                                    <div className="swiper-slide">
-                                        <div className="col-md-12">
-                                            <div className="client-img center-block">
-                                                <img
-                                                    alt="client-image"
-                                                    className="center-block"
-                                                    src="images/clients/client-2.png"/>
-                                            </div>
-                                            <blockquote>
-                                                I work with John on several web development projects and I find him to be
-                                                extremely creative and a technical Front End Developer.
-                                                <cite>Mike, CEO, IT World.</cite>
-                                            </blockquote>
-                                        </div>
-                                    </div>
-
-                                    <div className="swiper-slide">
-                                        <div className="col-md-12">
-                                            <div className="client-img center-block">
-                                                <img
-                                                    alt="client-image"
-                                                    className="center-block"
-                                                    src="images/clients/client-3.png"/>
-                                            </div>
-                                            <blockquote>
-                                                I work with John on several web development projects and I find him to be
-                                                extremely creative and a technical Front End Developer. Jone expertise involves
-                                                building complex Responsive Design layouts using HTML 5, CSS3, and JavaScript.
-                                                <cite>Mike, CEO, IT World.</cite>
-                                            </blockquote>
-                                        </div>
-                                    </div>
+                                    {this
+                                        .props
+                                        .src
+                                        .reviews
+                                        .map(t => <Review review={t.review} src={t.src} author={t.author}/>)}
                                 </div>
                                 <div className="swiper-pagination swiper-pagination-clients"></div>
                             </div>
@@ -88,8 +64,8 @@ export default class Testimonials extends Component {
                                 <div className="card">
                                     <div className="clients-wrap">
                                         <blockquote>
-                                            "He's honestly one of the best developers I've ever met. If there's something
-                                            impossible to be done he's the guy to call."
+                                            "{this.props.src.featured.review}"
+                                            <cite>{this.props.src.featured.author}</cite>
                                         </blockquote>
                                     </div>
                                 </div>

@@ -19,7 +19,7 @@ function Info(props) {
                     <span className="title">
                         <i className="material-icons">email</i>
                     </span>
-                    <span className="content">{props.mail}</span>
+                    <span className="content">{props.email}</span>
                 </li>
                 <li className="clearfix">
                     <span className="title">
@@ -56,7 +56,7 @@ function Links(props) {
             <a href={props.facebook} id="first_one" className="social btn-floating indigo">
                 <i className="fa fa-facebook"></i>
             </a>
-            <a href={props.twitter} className="social  btn-floating blue">
+            <a href={props.twitter} className="social btn-floating blue">
                 <i className="fa fa-twitter"></i>
             </a>
             <a href={props.linkedin} className="social  btn-floating blue darken-3">
@@ -67,9 +67,6 @@ function Links(props) {
 }
 
 export default class Banner extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
 
@@ -87,10 +84,10 @@ export default class Banner extends Component {
 
                                 <div className="card-content">
 
-                                    <Title name="Jonathan Portorreal" title="Software Engineer"/>
+                                    <Title name={this.props.profile.name} title={this.props.profile.title}/>
 
                                     <Info
-                                        mail="Jportorreal77@gmail.com"
+                                        email={this.props.profile.email}
                                         language="hitscotty.com"
                                         skype="hitscotty"
                                         phone="646 696 9068"

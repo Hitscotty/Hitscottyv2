@@ -12,7 +12,7 @@ export default class Contact extends Component {
                     </div>
 
                     <div className="row">
-                        <div id="contact-card" className="col-md-5 col-sm-12 col-xs-12">
+                        <div id="contact-card" className="col-md-12 col-sm-12 col-xs-12">
                             <div className="card">
                                 <div className="card-content">
                                     <form id="contact-form" name="c-form">

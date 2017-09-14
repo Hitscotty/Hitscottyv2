@@ -1,6 +1,6 @@
-import React, {Component, PropTypes} from 'react';
-import {Link} from 'react-router-dom'
-import '../stylesheets/navigation.css'
+import React, {Component, PropTypes} from 'react'
+import Menu from '../components/Menu.js'
+import './Navigation.css'
 import $ from 'jquery'
 
 export default class Navigation extends Component {
@@ -70,16 +70,22 @@ export default class Navigation extends Component {
 
     return (
       <header id="home" className="navigation-component">
+
+        <Menu/>
+
         <div id="nav-crumbs" aria-label="breadcrumbs">
           <ul className="breadcrumb">
             <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <a href="#projects">Projects</a>
-            </li>
-            <li>
               <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#education">Experience</a>
+            </li>
+            <li>
+              <a href="#blog">Projects</a>
+            </li>
+            <li>
+              <a href="#testimonials">Testimonials</a>
             </li>
           </ul>
         </div>
