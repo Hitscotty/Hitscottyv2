@@ -1,7 +1,10 @@
 import React, {Component} from 'react'
+import ReactSVG from 'react-svg'
+
 import './Menu.css'
 
 import $ from 'jquery'
+import Scotty from '../logo-sm.svg'
 
 export default class Menu extends Component {
 
@@ -35,11 +38,13 @@ export default class Menu extends Component {
             <nav id="theMenu" className="menu">
                 <div id="menu-options" className="menu-wrap">
 
-                    <div className="logo-flat">
-                        <img
-                            alt="personal-logo"
-                            className="img-responsive"
-                            src="images/profile/john.png"/>
+                    <div className="logo-flat menu-container">
+                        <div className="menu-mask">
+                            <ReactSVG
+                                path={Scotty}
+                                className="img-responsive menu-logo"
+                                evalScript="always"/>
+                        </div>
                     </div>
                     <br/>
 
