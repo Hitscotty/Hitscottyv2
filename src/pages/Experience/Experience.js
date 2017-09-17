@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-import book from '../images/icons/book.png'
+import book from '../../images/icons/book.png'
+import './Experience.css'
 
 function Ellipses(props) {
     if (props.popup) {
@@ -50,7 +51,7 @@ function TimeLineBlock(props) {
 export default class Experience extends Component {
     render() {
         return (
-            <section id="education" className="section">
+            <section id="experience" className="section">
                 <div className="container">
                     <div className="section-title">
                         <h4 className="text-uppercase text-center">
@@ -58,7 +59,7 @@ export default class Experience extends Component {
                             Experience
                         </h4>
                     </div>
-                    <div id="timeline-education">
+                    <div id="timeline-experience">
 
                         <TimeLineBlock
                             abrv="L"

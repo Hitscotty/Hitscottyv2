@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-import envelope from '../images/icons/envelope.png'
+import envelope from '../../images/icons/envelope.png'
+import './Contact.css';
 
 export default class Contact extends Component {
 

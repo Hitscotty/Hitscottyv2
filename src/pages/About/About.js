@@ -1,6 +1,8 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
+import './About.css'
+import Resume from '../../JonathanPortorrealResume.docx'
 
-export default class SummaryBox extends Component {
+export default class About extends Component {
 
     render() {
         return (
@@ -15,7 +17,10 @@ export default class SummaryBox extends Component {
 
                                 <div id="about-btn" className="card-action">
                                     <div className="about-btn">
-                                        <a href="#" className="btn waves-effect">Download CV</a>
+                                        <a
+                                            href={Resume}
+                                            download="JonathanPortorrealResume"
+                                            className="btn waves-effect">Download CV</a>
                                         <a href="#contact" className="btn waves-effect">Contact Me</a>
                                     </div>
                                 </div>

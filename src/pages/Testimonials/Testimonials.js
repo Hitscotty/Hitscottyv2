@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
-import testimonialicon from '../images/icons/handshake.png'
-import jesus from '../images/clients/jesus.jpg'
+import testimonialicon from '../../images/icons/handshake.png'
+import './Testimonials.css'
 import Swiper from 'swiper';
 
 function Review(props) {

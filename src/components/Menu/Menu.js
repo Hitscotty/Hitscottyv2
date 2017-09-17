@@ -4,7 +4,7 @@ import ReactSVG from 'react-svg'
 import './Menu.css'
 
 import $ from 'jquery'
-import Scotty from '../logo-sm.svg'
+import Scotty from '../../logo-sm.svg'
 
 export default class Menu extends Component {
 

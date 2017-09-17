@@ -1,0 +1,26 @@
+
+#about {
+    transition: all 1s;
+  }
+  
+  #about .about-btn {
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    animation-delay: 1s;
+    text-align: center;
+  }
+  
+  #about .about-btn .btn {
+    margin: 7px 7px;
+    background: #2c3e50;
+    color: #fff;
+    width: 180px;
+    border-radius: 2px;
+  }
+  
+  #about .about-btn .btn:hover {
+    background: #05985a;
+  }
+  
+  

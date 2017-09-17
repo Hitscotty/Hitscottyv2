@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-import mixer from '../images/icons/mixer.png'
+import mixer from '../../images/icons/mixer.png'
+import './Skills.css'
 import $ from 'jquery'
 
 function SkillBar(props) {
@@ -60,7 +61,7 @@ export default class Skills extends Component {
             <section id="skills" className="section">
                 <div className="container">
                     <div className="section-title">
-                        <h4 className="text-uppercase text-center"><img src={mixer}/>Skills</h4>
+                        <h4 className="text-uppercase text-center"><img alt="mixer" src={mixer}/>Skills</h4>
                     </div>
                     <div className="row">
                         <div className="col-md-12 col-sm-12 col-xs-12">

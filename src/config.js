@@ -1,5 +1,4 @@
 import Jesus from './images/clients/jesus.jpg'
-import Jonathan from './images/clients/jesus.jpg'
 import MainStreetIcon from './images/blog/MainStreet.png';
 import CunyFirstIcon from './images/blog/CunyFirst.png';
 import WordLadderIcon from './images/blog/Wordladder.jpg';

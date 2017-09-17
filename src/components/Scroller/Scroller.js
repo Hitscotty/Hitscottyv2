@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import $ from 'jquery'
-
+import './Scroller.css'
 export default class Scroller extends Component {
 
     componentDidMount() {

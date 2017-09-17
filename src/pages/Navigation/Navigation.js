@@ -1,5 +1,5 @@
-import React, {Component, PropTypes} from 'react'
-import Menu from '../components/Menu.js'
+import React, {Component} from 'react'
+import Menu from '../../components/Menu/Menu.js'
 import './Navigation.css'
 import $ from 'jquery'
 
@@ -17,11 +17,11 @@ export default class Navigation extends Component {
 
       const isPassed = () => {
         var y_scroll_pos = window.pageYOffset;
-        var element = $("#v-card-holder")
+        var element = $("#profile-card-container")
           .offset()
           .top;
 
-        var scroll_pos_test = $("#v-card-holder").height() + element;
+        var scroll_pos_test = $("#profile-card-container").height() + element;
 
         return y_scroll_pos > scroll_pos_test
       }
@@ -45,7 +45,7 @@ export default class Navigation extends Component {
           .on('click', function () {
             var location = window.location;
 
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
               var target = $(this.hash);
               target = target.length
                 ? target
@@ -86,6 +86,9 @@ export default class Navigation extends Component {
             </li>
             <li>
               <a href="#testimonials">Testimonials</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </div>

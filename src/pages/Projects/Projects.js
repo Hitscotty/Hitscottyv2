@@ -1,8 +1,7 @@
-import React, {Component, PropTypes} from 'react'
-import {Link} from 'react-router-dom'
+import React, {Component} from 'react'
 
-import SkillsTable from '../components/SkillsTable.js'
-import octoface from '../images/icons/octoface.svg'
+import SkillsTable from '../../components/SkillsTable/SkillsTable.js'
+import octoface from '../../images/icons/octoface.svg'
 
 export default class Projects extends Component {
   constructor(props) {
@@ -13,7 +12,6 @@ export default class Projects extends Component {
   }
 
   componentDidMount() {
-    const url = "https://api.github.com/users/hitscotty/repos";
     const languages = [
       "Java",
       "Haskell",
@@ -50,9 +48,9 @@ export default class Projects extends Component {
       <section id="projects" className="section">
         <div className="container">
           <div className="section-title">
-            <h4 className="text-uppercase text-center"><img src={octoface}/>Github Explorer</h4>
+            <h4 className="text-uppercase text-center"><img alt="octoface" src={octoface}/>Github Explorer</h4>
           </div>
-          <div className="card">
+          <div className="card projects-card">
             <div className="card-content">
               <SkillsTable
                 languages={this.state.languages}

@@ -1,8 +1,9 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component, PropTypes} from 'react'
 import {Link} from 'react-router-dom'
 
-import Board from '../components/Board.js';
-import LineDivider from '../components/LineDivider.js';
+import Board from '../../components/Board.js'
+import LineDivider from '../../components/LineDivider.js'
+import './About.css'
 
 export default class About extends Component {
 

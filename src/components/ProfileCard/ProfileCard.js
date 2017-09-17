@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-import img from "../images/profile/scotty.jpg"
+import img from "../../images/profile/scotty.jpg"
+import './ProfileCard.css'
 import $ from 'jquery'
 
 function Title(props) {
@@ -71,15 +72,15 @@ export default class Banner extends Component {
     render() {
 
         return (
-            <div id="v-card-holder" className="section">
+            <div id="profile-card-container" className="section">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12 col-sm-12 col-xs-12">
 
-                            <div id="v-card" className="card">
+                            <div id="profile-card" className="card">
 
                                 <div id="profile" className="right">
-                                    <img alt="profile-image" className="img-responsive" src={img}/>
+                                    <img alt="my-profile" className="img-responsive" src={img}/>
                                 </div>
 
                                 <div className="card-content">

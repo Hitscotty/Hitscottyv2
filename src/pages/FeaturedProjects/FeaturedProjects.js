@@ -1,8 +1,9 @@
-import React, {Component} from 'react';
-import PostIcon from '../images/icons/post-it.png';
+import React, {Component} from 'react'
+import PostIcon from '../../images/icons/post-it.png'
+import './FeaturedProjects.css'
 
 function ProjectCard(props) {
-    const container = "blog " + props.orientation;
+    const container = "featured-projects " + props.orientation;
     if (!props.skills) {
         return null;
     }
@@ -42,7 +43,7 @@ function ProjectCard(props) {
                     created scalable solutions for server side data that integrated smoothly with
                     client side needs.
                 </p>
-                <a className="forward" href="single-blog.html">Read More</a>
+                <a className="forward" href="single-featured-projects.html">Read More</a>
             </div>
         </div>
     )
@@ -60,13 +61,13 @@ export default class FeauredProjects extends Component {
         }
 
         return (
-            <section id="blog" className="section">
+            <section id="featured-projects" className="section">
                 <div className="container">
                     <div className="section-title">
                         <h4 className="text-uppercase text-center"><img src={PostIcon} alt="Projects"/>
                             Projects</h4>
                     </div>
-                    <div id="blog-card" className="row">
+                    <div id="featured-projects-card" className="row">
                         <div className="col-md-12 col-sm-12">
                             <div className="card">
 
