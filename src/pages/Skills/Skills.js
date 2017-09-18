@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import mixer from '../../images/icons/mixer.png'
 import './Skills.css'
-import $ from 'jquery'
+const $ = window.$;
 
 function SkillBar(props) {
     return (

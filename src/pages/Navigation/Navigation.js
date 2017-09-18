@@ -1,8 +1,7 @@
 import React, {Component} from 'react'
 import Menu from '../../components/Menu/Menu.js'
 import './Navigation.css'
-import $ from 'jquery'
-
+const $ = window.$;
 export default class Navigation extends Component {
 
   componentDidMount() {

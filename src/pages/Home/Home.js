@@ -1,8 +1,6 @@
 import React, {Component} from 'react'
 import 'magnific-popup/dist/jquery.magnific-popup.js'
-import 'scrollreveal'
 import './Home.css'
-import $ from 'jquery'
 
 import ProfileCard from '../../components/ProfileCard/ProfileCard.js'
 import Scroller from '../../components/Scroller/Scroller.js'
@@ -20,6 +18,7 @@ import Footer from '../Footer/Footer.js'
 
 import ScrollReveal from 'scrollreveal'
 const sr = ScrollReveal()
+const $ = window.$;
 
 export default class Home extends Component {
 

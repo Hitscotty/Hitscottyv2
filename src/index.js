@@ -17,7 +17,6 @@ import App from './App';
 import {BrowserRouter} from 'react-router-dom'
 
 import registerServiceWorker from './registerServiceWorker';
-const $ = window.$;
 
 ReactDOM.render(
     <BrowserRouter>

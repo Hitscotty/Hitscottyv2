@@ -1,8 +1,7 @@
 import React, {Component} from 'react'
 import testimonialicon from '../../images/icons/handshake.png'
 import './Testimonials.css'
-import Swiper from 'swiper'
-import $ from 'jquery'
+const $ = window.$;
 
 function Review(props) {
     return (
