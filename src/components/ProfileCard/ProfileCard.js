@@ -86,7 +86,6 @@ export default class Banner extends Component {
 
                             <div id="profile-card" className="card">
 
-                                <VideoPlayer/>
                                 <div id="profile" className="right">
                                     <img alt="my-profile" className="img-responsive" src={img}/>
                                 </div>

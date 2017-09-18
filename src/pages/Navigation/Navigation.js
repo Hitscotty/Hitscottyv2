@@ -78,10 +78,10 @@ export default class Navigation extends Component {
               <a href="#about">About</a>
             </li>
             <li>
-              <a href="#education">Experience</a>
+              <a href="#experience">Experience</a>
             </li>
             <li>
-              <a href="#blog">Projects</a>
+              <a href="#projects">Projects</a>
             </li>
             <li>
               <a href="#testimonials">Testimonials</a>

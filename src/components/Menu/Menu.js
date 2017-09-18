@@ -48,17 +48,17 @@ export default class Menu extends Component {
                     </div>
                     <br/>
 
-                    <a href="index-normal.html#home">
+                    <a href="#home">
                         <i className="title-icon fa fa-user"></i>Home</a>
-                    <a href="index-normal.html#about">
+                    <a href="#about">
                         <i className="title-icon fa fa-dashboard"></i>About</a>
-                    <a href="index-normal.html#education">
+                    <a href="#experience">
                         <i className="title-icon fa fa-graduation-cap"></i>Experience</a>
-                    <a href="index-normal.html#skills">
+                    <a href="#skills">
                         <i className="title-icon fa fa-sliders"></i>Skills</a>
-                    <a href="index-normal.html#testimonials">
+                    <a href="#testimonials">
                         <i className="title-icon fa fa-users"></i>Testimonials</a>
-                    <a href="index-normal.html#contact">
+                    <a href="#contact">
                         <i className="title-icon fa fa-envelope"></i>Contact</a>
                 </div>
 
