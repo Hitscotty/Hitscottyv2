@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
+/******/ 	__webpack_require__.p = "/hitscotty/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 109);
@@ -23652,7 +23652,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__App__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_react_router_dom__ = __webpack_require__(277);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__registerServiceWorker__ = __webpack_require__(304);
-__WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_14_react_router_dom__["a" /* BrowserRouter */],null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_13__App__["a" /* default */],null)),document.getElementById('root'));Object(__WEBPACK_IMPORTED_MODULE_15__registerServiceWorker__["a" /* default */])();
+var $=window.$;__WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_14_react_router_dom__["a" /* BrowserRouter */],null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_13__App__["a" /* default */],null)),document.getElementById('root'));Object(__WEBPACK_IMPORTED_MODULE_15__registerServiceWorker__["a" /* default */])();
 
 /***/ }),
 /* 117 */
@@ -30991,7 +30991,7 @@ var warning = __webpack_require__(3);
 
 var ReactComponentTreeHook;
 
-if (typeof process !== 'undefined' && Object({"NODE_ENV":"production","PUBLIC_URL":""}) && "production" === 'test') {
+if (typeof process !== 'undefined' && Object({"NODE_ENV":"production","PUBLIC_URL":"/hitscotty"}) && "production" === 'test') {
   // Temporary hack.
   // Inline requires don't work well with Jest:
   // https://github.com/facebook/react/issues/7240
@@ -32149,7 +32149,7 @@ var warning = __webpack_require__(3);
 
 var ReactComponentTreeHook;
 
-if (typeof process !== 'undefined' && Object({"NODE_ENV":"production","PUBLIC_URL":""}) && "production" === 'test') {
+if (typeof process !== 'undefined' && Object({"NODE_ENV":"production","PUBLIC_URL":"/hitscotty"}) && "production" === 'test') {
   // Temporary hack.
   // Inline requires don't work well with Jest:
   // https://github.com/facebook/react/issues/7240
@@ -48103,10 +48103,10 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 var isLocalhost=Boolean(window.location.hostname==='localhost'||// [::1] is the IPv6 localhost address.
 window.location.hostname==='[::1]'||// 127.0.0.1/8 is considered localhost for IPv4.
 window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/));function register(){if("production"==='production'&&'serviceWorker'in navigator){// The URL constructor is available in all browsers that support SW.
-var publicUrl=new URL("",window.location);if(publicUrl.origin!==window.location.origin){// Our service worker won't work if PUBLIC_URL is on a different origin
+var publicUrl=new URL("/hitscotty",window.location);if(publicUrl.origin!==window.location.origin){// Our service worker won't work if PUBLIC_URL is on a different origin
 // from what our page is served on. This might happen if a CDN is used to
 // serve assets; see https://github.com/facebookincubator/create-react-app/issues/2374
-return;}window.addEventListener('load',function(){var swUrl=""+'/service-worker.js';if(!isLocalhost){// Is not local host. Just register service worker
+return;}window.addEventListener('load',function(){var swUrl="/hitscotty"+'/service-worker.js';if(!isLocalhost){// Is not local host. Just register service worker
 registerValidSW(swUrl);}else{// This is running on localhost. Lets check if a service worker still exists or not.
 checkValidServiceWorker(swUrl);}});}}function registerValidSW(swUrl){navigator.serviceWorker.register(swUrl).then(function(registration){registration.onupdatefound=function(){var installingWorker=registration.installing;installingWorker.onstatechange=function(){if(installingWorker.state==='installed'){if(navigator.serviceWorker.controller){// At this point, the old content will have been purged and
 // the fresh content will have been added to the cache.
@@ -48123,4 +48123,4 @@ registerValidSW(swUrl);}}).catch(function(){console.log('No internet connection 
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=main.839382b0.js.map
+//# sourceMappingURL=main.f2f2f9e3.js.map
