@@ -102,9 +102,11 @@ export default class Banner extends Component {
                                         place="172 River Dr, Garfield, NJ"/>
 
                                     <Links
-                                        facebook="https://www.facebook.com/Hitscotty"
-                                        twitter="https://twitter.com/hitscotty"
-                                        linkedin="https://www.linkedin.com/in/hitscotty/"/>
+                                        facebook={this.props.profile.links.facebook}
+                                        twitter={this.props.profile.links.twitter}
+                                        linkedin={this.props.profile.links.linkedin}
+                                        instagram={this.props.profile.links.instagram}
+                                        wordpress={this.props.profile.links.wordpress}/>
 
                                 </div>
 

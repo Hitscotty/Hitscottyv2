@@ -27,7 +27,6 @@ export const config = {
             linkedin: "https://www.linkedin.com/in/hitscotty/",
             instagram: "https://www.instagram.com/hitscotty/",
             wordpress: "https://hitscotty.wordpress.com/"
-
         }
     },
     featured_projects: [
