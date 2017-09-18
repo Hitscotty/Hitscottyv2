@@ -43,7 +43,7 @@ function ProjectCard(props) {
                     created scalable solutions for server side data that integrated smoothly with
                     client side needs.
                 </p>
-                <a className="forward" href="single-featured-projects.html">Read More</a>
+                <a className="forward" href={props.more}>Read More</a>
             </div>
         </div>
     )
@@ -82,7 +82,8 @@ export default class FeauredProjects extends Component {
                                             date={p.date}
                                             skills={p.summary.skills}
                                             img={p.img}
-                                            description={p.summary.description}/>)
+                                            description={p.summary.description}
+                                            more={p.more}/>)
                                     })
 }
                             </div>

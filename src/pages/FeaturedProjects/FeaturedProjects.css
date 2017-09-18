@@ -129,6 +129,9 @@
     color: black;
   }
   
+
+  #featured-projects .forward{
+  }
   @media screen and (max-width:768px) {
     #featured-projects .featured-projects {
       display: block;

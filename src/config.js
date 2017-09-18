@@ -1,7 +1,11 @@
-import Jesus from './images/clients/jesus.jpg'
-import MainStreetIcon from './images/blog/MainStreet.png';
-import CunyFirstIcon from './images/blog/CunyFirst.png';
-import WordLadderIcon from './images/blog/Wordladder.jpg';
+import Jesus from './images/headshots/jesus.png'
+import Evellard from './images/headshots/Evellard.jpg'
+import Francisco from './images/headshots/Francisco.png'
+import Pedro from './images/headshots/Pedro.jpg'
+
+import MainStreetIcon from './images/blog/MainStreet.png'
+import CunyFirstIcon from './images/blog/CunyFirst.png'
+import WordLadderIcon from './images/blog/Wordladder.jpg'
 
 export const config = {
     profile: {
@@ -20,7 +24,10 @@ export const config = {
         links: {
             facebook: "https://www.facebook.com/Hitscotty",
             twitter: "https://twitter.com/hitscotty",
-            linkedin: "https://www.linkedin.com/in/hitscotty/"
+            linkedin: "https://www.linkedin.com/in/hitscotty/",
+            instagram: "https://www.instagram.com/hitscotty/",
+            wordpress: "https://hitscotty.wordpress.com/"
+
         }
     },
     featured_projects: [
@@ -32,11 +39,11 @@ export const config = {
                 skills: [
                     "SQL", "C#", "JS"
                 ],
-                description: `Web design, mobile design, and api developer. Developed UX experiences and
-          created scalable solutions for server side data that integrated smoothly with
-          client side needs.`
-            }
-
+                description: `Developed Web and Mobile App; created stored procedures and front end interfaces for them.
+                Used D3JS and angular to implement difficult ui needs.
+                `
+            },
+            more: "https://github.com/Hitscotty/MainStreetMb"
         }, {
             title: "Cuny First Api",
             date: "Dec - March",
@@ -49,7 +56,8 @@ export const config = {
                 CunySecond using this API. Used Web Scraping with JS to pull data, MongoDB to store the data temporarily, and Express 
                 to serve the files as REST
                 `
-            }
+            },
+            more: "https://github.com/Hitscotty/cuny-first-api"
 
         }, {
             title: "Word Ladder",
@@ -62,8 +70,8 @@ export const config = {
                 description: `Web design, mobile design, and api developer. Developed UX experiences and
           created scalable solutions for server side data that integrated smoothly with
           client side needs.`
-            }
-
+            },
+            more: "https://github.com/Hitscotty/Word-Ladder"
         }
     ],
     skills: [
@@ -146,16 +154,27 @@ export const config = {
                 a large focus on scale and efficiency and I've always enjoyed working with him`,
                 src: Jesus
             }, {
-                author: "Jonathan",
-                review: `I Love working with myself, I'm truly a great person. I'm not selfish, but I am brilliant.`,
-                src: Jesus
+                author: "Francisco",
+                review: `Jonathan has numerous treats that make him a unique candidates for many different positions. 
+                He is very task oriented and knows how to deal with a lot of tasks while keeping deadlines in mind. 
+                He is also always willing to help others without it interfering with his quality of work. His ability 
+                to learn new technology and effectively apply it to various tasks has always been impressive to me.`,
+                src: Francisco
             }, {
-                author: "Me",
-                review: `I work with Jonathan on several web development projects and I find him to be
-                extremely creative and a technical Front End Developer. Jonathan's expertise involves
-                building complex features that intgrate smoothly with different backends. He's always had
-                a large focus on scale and efficiency and I've always enjoyed working with him`,
-                src: Jesus
+                author: "Pedro",
+                review: `I am a Software Engineer at Capital One. Jonathan’s ability to problem 
+                solve and willingness to dive in to any challenge were evident to me in projects 
+                and assignments we had worked on together. He was flexible, easy to work 
+                with and a great team player on the projects we were assigned together. He is a passionate individual 
+                who is very willing and motivated to learn and grow as a developer and individual.
+                Overall Jonathan would be an excellent addition to a software engineering role.
+                `,
+                src: Pedro
+            }, {
+                author: "Evellard",
+                review: ` I am proud to call him my close friend, I admire his passion for math and his 
+                skills to solve difficult puzzles.`,
+                src: Evellard
             }
         ]
     }

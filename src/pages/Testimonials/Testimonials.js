@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import testimonialicon from '../../images/icons/handshake.png'
 import './Testimonials.css'
-import Swiper from 'swiper';
+import Swiper from 'swiper'
+import $ from 'jquery'
 
 function Review(props) {
     return (
@@ -12,6 +13,7 @@ function Review(props) {
                 </div>
                 <blockquote>
                     {props.review}
+                    <span className="endquote"></span>
                     <cite>{props.author}</cite>
                 </blockquote>
             </div>
@@ -21,16 +23,19 @@ function Review(props) {
 export default class Testimonials extends Component {
 
     componentDidMount() {
-        var swiper = new Swiper('.swiper-container-clients', {
-            pagination: '.swiper-pagination-clients',
-            a11y: true,
-            keyboardControl: true,
-            autoHeight: true,
-            speed: 800,
-            paginationClickable: true
-        });
+        $(function () {
+            $("body").append(`<script>
+                new Swiper('.swiper-container-clients', {
+                    pagination: '.swiper-pagination-clients',
+                    a11y: true,
+                    keyboardControl: true,
+                    autoHeight: true,
+                    speed: 800,
+                    paginationClickable: true
+                });
+            </script>`)
+        })
     }
-
     render() {
 
         if (!this.props.src) {
@@ -55,6 +60,7 @@ export default class Testimonials extends Component {
                                         .map(t => <Review review={t.review} src={t.src} author={t.author}/>)}
                                 </div>
                                 <div className="swiper-pagination swiper-pagination-clients"></div>
+
                             </div>
                         </div>
                     </div>

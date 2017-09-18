@@ -19,7 +19,7 @@
     margin-top: 45px;
     width: 100%;
     padding: 0 0;
-    background: #05985a;
+    background: white;
     height: 4px;
     -webkit-transition: 0.4s linear;
     transition: 0.4s linear;
@@ -45,7 +45,7 @@
   #skills .card .skillbar .skillbar-bar {
     height: 4px;
     width: 0;
-    background: #fff;
+    background: #05985a;
   }
   
   #skills .card .skillbar .skill-bar-percent {

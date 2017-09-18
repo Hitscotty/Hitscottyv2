@@ -78,18 +78,28 @@
     margin-top: 12px;
     height: 100%;
   }
-  
+
+  #profile-card-container #profile-card .links social{
+    color: #228DFF;
+  }
+ 
   #profile-card-container #profile-card .links .social {
     margin-left: 12px;
     margin-bottom: 4px;
+    background: #228DFF;
   }
   
+
   #profile-card-container #profile-card .links .social i {
     font-size: 15px;
     vertical-align: middle;
     padding-bottom: 15px;
   }
   
+  #profile-card-container #profile-card .links .social i:hover {
+    color: #2c3e50;
+  }
+
   @media screen and (max-width:400px) {
     #profile-card-container #profile-card .links .social {
       margin: 4px;

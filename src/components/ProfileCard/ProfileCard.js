@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import img from "../../images/profile/scotty.jpg"
 import './ProfileCard.css'
+import VideoPlayer from '../VideoPlayer/VideoPlayer.js'
 import $ from 'jquery'
 
 function Title(props) {
@@ -63,6 +64,12 @@ function Links(props) {
             <a href={props.linkedin} className="social  btn-floating blue darken-3">
                 <i className="fa fa-linkedin"></i>
             </a>
+            <a href={props.instagram} className="social btn-floating orange darken-3">
+                <i className="fa fa-instagram"></i>
+            </a>
+            <a href={props.wordpress} className="social btn-floating red darken-3">
+                <i className="fa fa-wordpress"></i>
+            </a>
         </div>
     )
 }
@@ -79,6 +86,7 @@ export default class Banner extends Component {
 
                             <div id="profile-card" className="card">
 
+                                <VideoPlayer/>
                                 <div id="profile" className="right">
                                     <img alt="my-profile" className="img-responsive" src={img}/>
                                 </div>

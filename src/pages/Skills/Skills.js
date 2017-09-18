@@ -34,17 +34,23 @@ function SkillSection(props) {
 export default class Skills extends Component {
 
     componentDidMount() {
-        function initSkills() {
-            $('div.skillbar')
-                .each(function () {
-                    $(this)
-                        .find('div.skillbar-bar')
-                        .css({
-                            width: $(this).attr('data-percent')
+        $(window)
+            .on('load', function () {
+
+                function initSkills() {
+                    $('div.skillbar')
+                        .each(function () {
+                            $(this)
+                                .find('div.skillbar-bar')
+                                .animate({
+                                    width: $(this).attr('data-percent')
+                                }, 6000);
                         });
-                });
-        }
-        initSkills();
+                }
+
+                initSkills();
+            })
+
     }
     render() {
 
