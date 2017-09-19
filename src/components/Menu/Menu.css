@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Libre+Barcode+39+Text|Source+Code+Pro');
+
 #home .menu {
   display: none;
   position: fixed;
@@ -14,11 +16,12 @@
   margin-right: 30px;
   color: #616161;
   display: block;
-  font-size: 12px;
+  font-size: 1.5em;
   font-weight: 700;
   line-height: 40px;
   letter-spacing: .1em;
   text-transform: uppercase;
+  font-family: 'Amatic SC', cursive !important;
 }
 
 #home .menu a:hover {

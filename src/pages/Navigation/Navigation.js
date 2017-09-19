@@ -16,11 +16,11 @@ export default class Navigation extends Component {
 
       const isPassed = () => {
         var y_scroll_pos = window.pageYOffset;
-        var element = $("#profile-card-container")
+        var element = $("#profile-card")
           .offset()
           .top;
 
-        var scroll_pos_test = $("#profile-card-container").height() + element;
+        var scroll_pos_test = $("#profile-card").height() - element;
 
         return y_scroll_pos > scroll_pos_test
       }
@@ -34,8 +34,29 @@ export default class Navigation extends Component {
       }
 
       updateNav();
+
       $(window).scroll(function () {
         updateNav()
+
+        var $activeSection;
+        const currentScroll = $(this).scrollTop();
+
+        $(".section").each(function () {
+          var sectionPosition = $(this)
+            .offset()
+            .top;
+          if (sectionPosition < currentScroll + 130) {
+            if ($(this).attr("id") !== "projects") 
+              $activeSection = $(this);
+            }
+          
+          if ($activeSection) {
+            var id = $activeSection.attr('id');
+            $('#nav-crumbs a').removeClass('active');
+            $("#nav-crumbs a[href='#" + id + "']").addClass('active');
+          }
+
+        })
       });
 
       const initSmoothScroll = () => {
@@ -62,6 +83,12 @@ export default class Navigation extends Component {
       }
 
       initSmoothScroll();
+
+      $("body").append(`
+      <script>
+        $("#nav-crumbs").removeClass("hide");
+      </script>
+      `)
     })
   }
 
@@ -72,7 +99,7 @@ export default class Navigation extends Component {
 
         <Menu/>
 
-        <div id="nav-crumbs" aria-label="breadcrumbs">
+        <div id="nav-crumbs" aria-label="breadcrumbs" className="hide">
           <ul className="breadcrumb">
             <li>
               <a href="#about">About</a>
@@ -81,7 +108,10 @@ export default class Navigation extends Component {
               <a href="#experience">Experience</a>
             </li>
             <li>
-              <a href="#projects">Projects</a>
+              <a href="#skills">Skills</a>
+            </li>
+            <li>
+              <a href="#featured-projects">Projects</a>
             </li>
             <li>
               <a href="#testimonials">Testimonials</a>

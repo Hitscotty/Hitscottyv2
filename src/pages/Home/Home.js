@@ -26,7 +26,7 @@ export default class Home extends Component {
         // Global Animations
         $(window)
             .on('load', function () {
-                $('div#loading').fadeOut(4500);
+                $('div#loading').fadeOut(7000);
                 window.sr = ScrollReveal({reset: false});
                 var commonCards = `.timeline-dot,.timeline-content,
                                    #skills-card, #testimonials-card, 
