@@ -1,4 +1,4 @@
-## This is my Personal Wesbite V2 
+### This is my Personal Wesbite V2 
 
 # Start
   overall it's a Single Page App with a config.js file as the data source. By putting in 
@@ -9,7 +9,7 @@
   I'm actively working on making this app better if there are any bugs, requests, or cool improvements 
   feel free to make an issue request; please and thank you.
 
-#Tools Used
+# Tools Used
 - [create-react-app/reactjs](https://github.com/facebookincubator/create-react-app)
 - [ScrollReveal](https://scrollrevealjs.org/)
 - [Swiper](http://idangero.us/swiper/)
