@@ -26,8 +26,7 @@ export default class Projects extends Component {
   }
 
   getProjects(lang) {
-    const token = "&access_token=525702c516206aa8a44179b76aa3d9c36531fc6d";
-    fetch(`https://api.github.com/search/repositories?q=user:hitscotty language:${lang}${token}`)
+    fetch(`https://api.github.com/search/repositories?q=user:hitscotty language:${lang}`)
       .then(d => d.json())
       .then(data => {
         this.setState({gitHubData: data.items});
