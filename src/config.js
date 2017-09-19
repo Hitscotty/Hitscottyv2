@@ -14,8 +14,8 @@ export const config = {
         username: "Hitscotty",
         email: "Jportorreal77@gmail.com",
         phone: "646 696 9068",
-        website: "hitscotty.com",
-        place: "172 River Dr, Garfield, NJ",
+        website: "github.com/hitscotty",
+        place: "Developer State of Mind",
         summary: `Hey, I'm Jonathan Portorreal, but everyone calls me Scotty! I'm a Software
         Engineer developing all kinds of neat stuff for 4 years now. I specialize in
         solving problems both on the front-end and the back-end. Experienced with
@@ -147,10 +147,12 @@ export const config = {
         reviews: [
             {
                 author: "Jesus",
-                review: `I work with Jonathan on several web development projects and I find him to be
-                extremely creative and a technical Front End Developer. Jonathan's expertise involves
-                building complex features that intgrate smoothly with different backends. He's always had
-                a large focus on scale and efficiency and I've always enjoyed working with him`,
+                review: `Jonathan's imagination runs wild, more so than anyone I've ever met. His passion is contagious. 
+                I am most amazed by his ability to absorb information and produce a work of art, anything he envisions 
+                he brings into fruition. Working with Jonathan has changed our development team, his passion became our 
+                fuel as we dove into uncharted waters, we've managed to reach depths we never thought possible. This has 
+                brought about change not only within our product but also within ourselves. In turn Jonathon has become 
+                an invaluable member of our team, and if fate allows it I would like nothing more than to work with him in the future.`,
                 src: Jesus
             }, {
                 author: "Francisco",

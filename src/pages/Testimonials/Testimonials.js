@@ -23,17 +23,21 @@ export default class Testimonials extends Component {
 
     componentDidMount() {
         $(function () {
-            $("body").append(`<script>
-                new Swiper('.swiper-container-clients', {
-                    pagination: '.swiper-pagination-clients',
-                    a11y: true,
-                    keyboardControl: true,
-                    autoHeight: true,
-                    speed: 800,
-                    paginationClickable: true
-                });
-            </script>`)
+
+            $("body").append(`
+            <script>
+            new Swiper('.swiper-container-clients', {
+              pagination: '.swiper-pagination-clients',
+              a11y: true,
+              keyboardControl: true,
+              autoHeight: true,
+              speed: 800,
+              paginationClickable: true
+            });
+          </script>
+            `)
         })
+
     }
     render() {
 

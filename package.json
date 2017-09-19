@@ -2,12 +2,10 @@
   "name": "hitscotty",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://hitscotty.github.io/hitscotty",
   "dependencies": {
     "bootstrap": "^3.3.7",
     "bulma": "^0.5.1",
     "font-awesome": "^4.7.0",
-    "gh-pages": "^1.0.0",
     "jquery": "^3.2.1",
     "magnific-popup": "^1.1.0",
     "materialize-css": "^0.100.2",
@@ -25,8 +23,6 @@
     "swiper": "^4.0.0-beta.1"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

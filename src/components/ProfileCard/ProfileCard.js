@@ -96,10 +96,10 @@ export default class Banner extends Component {
 
                                     <Info
                                         email={this.props.profile.email}
-                                        language="hitscotty.com"
-                                        skype="hitscotty"
-                                        phone="646 696 9068"
-                                        place="172 River Dr, Garfield, NJ"/>
+                                        language={this.props.profile.website}
+                                        skype={this.props.profile.username}
+                                        phone={this.props.profile.phone}
+                                        place={this.props.profile.place}/>
 
                                     <Links
                                         facebook={this.props.profile.links.facebook}

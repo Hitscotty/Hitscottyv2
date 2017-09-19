@@ -34,21 +34,42 @@ function SkillSection(props) {
 export default class Skills extends Component {
 
     componentDidMount() {
+
+        // checks if element is visible on screen
+        $.fn.isInViewport = function () {
+            var elementTop = $(this)
+                .offset()
+                .top;
+            var elementBottom = elementTop + $(this).outerHeight();
+            var viewportTop = $(window).scrollTop();
+            var viewportBottom = viewportTop + $(window).height();
+            return elementBottom > viewportTop && elementTop < viewportBottom;
+        };
+
+        const initSkills = () => {
+            $('div.skillbar')
+                .each(function () {
+                    $(this)
+                        .find('div.skillbar-bar')
+                        .animate({
+                            width: $(this).attr('data-percent')
+                        }, 6000);
+                });
+        }
+        const onScrollInitSkills = () => {
+            if ($('div.skillbar').isInViewport()) {
+                initSkills();
+                $(window).off("scroll", onScrollInitSkills)
+            }
+        }
+
         $(window)
             .on('load', function () {
-
-                function initSkills() {
-                    $('div.skillbar')
-                        .each(function () {
-                            $(this)
-                                .find('div.skillbar-bar')
-                                .animate({
-                                    width: $(this).attr('data-percent')
-                                }, 6000);
-                        });
+                if ($('div.skillbar').isInViewport()) {
+                    initSkills();
+                } else {
+                    $(window).scroll(onScrollInitSkills)
                 }
-
-                initSkills();
             })
 
     }
