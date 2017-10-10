@@ -38,8 +38,9 @@ export const config = {
                 skills: [
                     "SQL", "C#", "JS"
                 ],
-                description: `Developed Web and Mobile App; created stored procedures and front end interfaces for them.
-                Used D3JS and angular to implement difficult ui needs.
+                description: `Developed Web and Mobile App; created stored procedures, front end interfaces, C#/Angular Complex User Controls.
+                Used D3JS to add a data visualization layer to the CRM. Maintained/Created company API and collaborated with team to push
+                client needed features on a sprint to sprint basis.
                 `
             },
             more: "https://github.com/Hitscotty/MainStreetMb"
@@ -66,9 +67,9 @@ export const config = {
                 skills: [
                     "Android", "Java", "Data Structures"
                 ],
-                description: `Web design, mobile design, and api developer. Developed UX experiences and
-          created scalable solutions for server side data that integrated smoothly with
-          client side needs.`
+                description: `Implemented algorithms and data structures to create a word game with android studio. Collaborated
+                with others at a google coding bootcamp to perfect our android games, develop them further, and create meaningful user 
+                experiences. Word Ladder is one of the 8 word games I developed at Google.`
             },
             more: "https://github.com/Hitscotty/Word-Ladder"
         }

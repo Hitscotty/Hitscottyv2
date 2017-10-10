@@ -39,9 +39,7 @@ function ProjectCard(props) {
                 </ol>
                 <h6>Fullstack</h6>
                 <p>
-                    Web design, mobile design, and api developer. Developed UX experiences and
-                    created scalable solutions for server side data that integrated smoothly with
-                    client side needs.
+                    {props.description}
                 </p>
                 <a className="forward" href={props.more}>Read More</a>
             </div>
