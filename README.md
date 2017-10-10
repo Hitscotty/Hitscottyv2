@@ -18,10 +18,13 @@
 - [Pop.Co](https://pop.co) 
 
 # Deployment
+
 `npm start` - runs the development server  
 
 `npm run build` - bundles everything into /build for deployment  
 
 `serve -s build` - lets you see the current /build live on local or temporary network url  
+
+`npm install netlify-cli -g` - downloads the netlify cli 
 
 `netlify deploy` - publishes app to netlify *(host)*
