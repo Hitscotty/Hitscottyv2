@@ -1,3 +1,4 @@
+import React, { createContext } from "react";
 import Jesus from "./images/headshots/jesus.png";
 import Evellard from "./images/headshots/Evellard.jpg";
 import Francisco from "./images/headshots/Francisco.png";
@@ -7,7 +8,7 @@ import MainStreetIcon from "./images/blog/MainStreet.png";
 import CunyFirstIcon from "./images/blog/CunyFirst.png";
 import WordLadderIcon from "./images/blog/Wordladder.jpg";
 
-export const config = {
+const defaultConfig = {
   profile: {
     name: "Jonathan Portorreal",
     title: "Software Engineer",
@@ -205,7 +206,7 @@ export const config = {
                 he brings into fruition. Working with Jonathan has changed our development team, his passion became our 
                 fuel as we dove into uncharted waters, we've managed to reach depths we never thought possible. This has 
                 brought about change not only within our product but also within ourselves. In turn Jonathon has become 
-                an invaluable member of our team, and if fate allows it I would like nothing more than to work with him in the future.`,
+                an invaluable member of our team, Pand if fate allows it I would like nothing more than to work with him in the future.`,
         src: Jesus
       },
       {
@@ -236,3 +237,13 @@ export const config = {
     ]
   }
 };
+
+export const ConfigContext = createContext();
+
+export const ConfigProvider = ({ children }) => (
+  <ConfigContext.Provider value={{ ...defaultConfig }}>
+    {children}
+  </ConfigContext.Provider>
+);
+
+export default ConfigContext;

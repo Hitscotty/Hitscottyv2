@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useContext } from "react";
 import "magnific-popup/dist/jquery.magnific-popup.js";
 import "./Home.css";
 
@@ -17,47 +17,36 @@ import Contact from "../Contact/Contact.js";
 import Footer from "../Footer/Footer.js";
 
 import ScrollReveal from "scrollreveal";
+import { ConfigContext } from "../../config";
 const sr = ScrollReveal();
 const $ = window.$;
 
-export default class Home extends Component {
-  constructor() {
-    super();
-    this.state = {
-      loading: true
-    };
-  }
+const Home = () => {
+  const {
+    profile: { summary, name, title, username },
+    skills,
+    featured_projects,
+    testimonials
+  } = useContext(ConfigContext);
 
-  componentDidMount() {
-    this.setState({ loading: false });
-  }
+  return (
+    <div className="body-layer">
+      <Navigation />
+      <ProfileCard />
+      <About>
+        <p>{summary}</p>
+      </About>
+      <Experience />
+      <Skills />
+      <FeaturedProjects />
+      <Projects id="projects" />
+      <Testimonials />
+      <Contact />
+      <Loader />
+      <Scroller />
+      <Footer />
+    </div>
+  );
+};
 
-  componentWillMount() {
-    // Global Animations
-  }
-  render() {
-    const { loading } = this.state;
-
-    return (
-      <div className="body-layer">
-        <Navigation />
-        <ProfileCard profile={this.props.settings.profile} />
-        <About>
-          <p>{this.props.settings.profile.summary}</p>
-        </About>
-        <Experience experience={this.props.settings.experience} />
-        <Skills skills={this.props.settings.skills} />
-        <FeaturedProjects src={this.props.settings.featured_projects} />
-        <Projects id="projects" />
-        <Testimonials src={this.props.settings.testimonials} />
-        <Contact />
-        <Loader
-          name={this.props.settings.profile.name}
-          title={this.props.settings.profile.title}
-        />
-        <Scroller />
-        <Footer name={this.props.settings.profile.username} />
-      </div>
-    );
-  }
-}
+export default Home;

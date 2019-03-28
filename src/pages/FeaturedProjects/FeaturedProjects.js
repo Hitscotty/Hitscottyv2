@@ -1,6 +1,7 @@
-import React, { Component } from "react";
+import React, { useContext } from "react";
 import PostIcon from "../../images/icons/post-it.png";
 import "./FeaturedProjects.css";
+import ConfigContext from "../../config";
 
 function ProjectCard(props) {
   const container = "featured-projects " + props.orientation;
@@ -41,45 +42,43 @@ function ProjectCard(props) {
   );
 }
 
-export default class FeauredProjects extends Component {
-  render() {
-    const orient = i => (i % 2 === 0 ? "even" : "odd");
+const FeauredProjects = () => {
+  const { featured_projects } = useContext(ConfigContext);
 
-    if (!this.props.src) {
-      return null;
-    }
+  const orient = i => (i % 2 === 0 ? "even" : "odd");
 
-    return (
-      <section id="featured-projects" className="section">
-        <div className="container">
-          <div className="section-title">
-            <h4 className="text-uppercase text-center">
-              <img src={PostIcon} />
-              Projects
-            </h4>
-          </div>
-          <div id="featured-projects-card" className="row">
-            <div className="col-md-12 col-sm-12">
-              <div className="card">
-                {this.props.src.map((p, i) => {
-                  return (
-                    <ProjectCard
-                      key={i}
-                      orientation={orient(i)}
-                      title={p.title}
-                      date={p.date}
-                      skills={p.summary.skills}
-                      img={p.img}
-                      description={p.summary.description}
-                      more={p.more}
-                    />
-                  );
-                })}
-              </div>
+  return (
+    <section id="featured-projects" className="section">
+      <div className="container">
+        <div className="section-title">
+          <h4 className="text-uppercase text-center">
+            <img src={PostIcon} />
+            Projects
+          </h4>
+        </div>
+        <div id="featured-projects-card" className="row">
+          <div className="col-md-12 col-sm-12">
+            <div className="card">
+              {featured_projects.map((p, i) => {
+                return (
+                  <ProjectCard
+                    key={i}
+                    orientation={orient(i)}
+                    title={p.title}
+                    date={p.date}
+                    skills={p.summary.skills}
+                    img={p.img}
+                    description={p.summary.description}
+                    more={p.more}
+                  />
+                );
+              })}
             </div>
           </div>
         </div>
-      </section>
-    );
-  }
-}
+      </div>
+    </section>
+  );
+};
+
+export default FeauredProjects;

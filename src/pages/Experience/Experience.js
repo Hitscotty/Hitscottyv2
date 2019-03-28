@@ -1,6 +1,7 @@
-import React, { Component } from "react";
+import React, { useContext } from "react";
 import book from "../../images/icons/book.png";
 import "./Experience.css";
+import ConfigContext from "../../config";
 
 function Ellipses(props) {
   if (props.popup) {
@@ -47,37 +48,36 @@ function TimeLineBlock(props) {
     </div>
   );
 }
-export default class Experience extends Component {
-  render() {
-    if (!this.props.experience) {
-      return null;
-    }
 
-    const timelineSection = this.props.experience.map(x => {
-      return (
-        <TimeLineBlock
-          key={x.title}
-          abrv={x.title[0]}
-          title={x.title}
-          subtitle={x.subTitle}
-          hiatus={x.startDate + " - " + x.endDate}
-          summary={x.summary}
-        />
-      );
-    });
+const Experience = () => {
+  const { experience } = useContext(ConfigContext);
 
+  const timelineSection = experience.map(x => {
     return (
-      <section id="experience" className="section">
-        <div className="container">
-          <div className="section-title">
-            <h4 className="text-uppercase text-center">
-              <img src={book} alt="demo" />
-              Experience
-            </h4>
-          </div>
-          <div id="timeline-experience">{timelineSection}</div>
-        </div>
-      </section>
+      <TimeLineBlock
+        key={x.title}
+        abrv={x.title[0]}
+        title={x.title}
+        subtitle={x.subTitle}
+        hiatus={x.startDate + " - " + x.endDate}
+        summary={x.summary}
+      />
     );
-  }
-}
+  });
+
+  return (
+    <section id="experience" className="section">
+      <div className="container">
+        <div className="section-title">
+          <h4 className="text-uppercase text-center">
+            <img src={book} alt="demo" />
+            Experience
+          </h4>
+        </div>
+        <div id="timeline-experience">{timelineSection}</div>
+      </div>
+    </section>
+  );
+};
+
+export default Experience;
