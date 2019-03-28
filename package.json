@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-loader": "^8.0.5",
     "bootstrap": "^3.3.7",
     "bulma": "^0.5.1",
     "font-awesome": "^4.7.0",
@@ -10,17 +11,16 @@
     "magnific-popup": "^1.1.0",
     "materialize-css": "^0.100.2",
     "netlify": "^1.2.0",
-    "netlify-cli": "^1.2.2",
+    "netlify-cli": "^2.2.1",
     "octicons": "^6.0.1",
     "popper.js": "^1.12.5",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-router": "^4.2.0",
-    "react-router-dom": "^4.2.2",
-    "react-scripts": "1.0.12",
-    "react-svg": "^2.1.21",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "^2.1.8",
+    "react-svg": "^7.1.0",
     "scrollreveal": "^3.3.6",
-    "source-map-explorer": "^1.4.0",
+    "source-map-explorer": "^1.6.0",
     "swiper": "^4.0.0-beta.1"
   },
   "scripts": {
@@ -28,5 +28,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
