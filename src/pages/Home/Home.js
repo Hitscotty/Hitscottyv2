@@ -23,10 +23,7 @@ const $ = window.$;
 
 const Home = () => {
   const {
-    profile: { summary, name, title, username },
-    skills,
-    featured_projects,
-    testimonials
+    profile: { summary }
   } = useContext(ConfigContext);
 
   return (
