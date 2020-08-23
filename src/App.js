@@ -1,13 +1,10 @@
-import React, {Component} from 'react'
-import './App.css'
-import Home from './pages/Home/Home.js'
-import {config} from './config.js'
+import "./App.css";
 
-class App extends Component {
+import React, { Component } from "react";
 
-  render() {
-    return (<Home settings={config}/>);
-  }
-}
+import Home from "./pages/Home/Home.js";
+import { config } from "./config.js";
+
+const App = () => <Home settings={config} />;
 
 export default App;

@@ -21,6 +21,7 @@
     "react-svg": "^2.1.21",
     "scrollreveal": "^3.3.6",
     "source-map-explorer": "^1.4.0",
+    "styled-components": "^5.1.1",
     "swiper": "^4.0.0-beta.1"
   },
   "scripts": {

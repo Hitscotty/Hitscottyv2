@@ -1,63 +1,36 @@
-import React, { Component } from "react";
-import "magnific-popup/dist/jquery.magnific-popup.js";
 import "./Home.css";
 
-import ProfileCard from "../../components/ProfileCard/ProfileCard.js";
-import Scroller from "../../components/Scroller/Scroller.js";
-import Loader from "../../components/Loader/Loader.js";
+import React from "react";
+import { config } from "../../config.js";
+import img from "../../images/profile/scotty.jpg";
 
-import Navigation from "../Navigation/Navigation.js";
-import About from "../About/About.js";
-import Experience from "../Experience/Experience.js";
-import Skills from "../Skills/Skills.js";
-import FeaturedProjects from "../FeaturedProjects/FeaturedProjects.js";
-import Projects from "../Projects/Projects.js";
-import Testimonials from "../Testimonials/Testimonials.js";
-import Contact from "../Contact/Contact.js";
-import Footer from "../Footer/Footer.js";
-
-import ScrollReveal from "scrollreveal";
-const sr = ScrollReveal();
-const $ = window.$;
-
-export default class Home extends Component {
-  constructor() {
-    super();
-    this.state = {
-      loading: true
-    };
-  }
-
-  componentDidMount() {
-    this.setState({ loading: false });
-  }
-
-  componentWillMount() {
-    // Global Animations
-  }
-  render() {
-    const { loading } = this.state;
-
-    return (
-      <div className="body-layer">
-        <Navigation />
-        <ProfileCard profile={this.props.settings.profile} />
-        <About>
-          <p>{this.props.settings.profile.summary}</p>
-        </About>
-        <Experience experience={this.props.settings.experience} />
-        <Skills skills={this.props.settings.skills} />
-        <FeaturedProjects src={this.props.settings.featured_projects} />
-        <Projects id="projects" />
-        <Testimonials src={this.props.settings.testimonials} />
-        <Contact />
-        <Loader
-          name={this.props.settings.profile.name}
-          title={this.props.settings.profile.title}
-        />
-        <Scroller />
-        <Footer name={this.props.settings.profile.username} />
+export const Home = () => (
+  <div id="profile-card-container" className="section">
+    <div className="container">
+      <div className="row">
+        <div className="col-md-12 col-sm-12 col-xs-12">
+          <div id="profile-card" className="card">
+            <div id="profile" className="right">
+              <img alt="my-profile" className="img-responsive" src={img} />
+            </div>
+            <div className="card-content">
+              <div className="info-headings">
+                <h4 className="text-uppercase left">{config.profile.name}</h4>
+                <h6 className="text-capitalize left">{config.profile.title}</h6>
+              </div>
+              <div className="infos">
+                <ul className="profile-list">
+                  <li className="clearfix">
+                    <span className="content">{config.profile.memo}</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    );
-  }
-}
+    </div>
+  </div>
+);
+
+export default Home;
