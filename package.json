@@ -13,11 +13,11 @@
     "netlify-cli": "^1.2.2",
     "octicons": "^6.0.1",
     "popper.js": "^1.12.5",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-router": "^4.2.0",
-    "react-router-dom": "^4.2.2",
-    "react-scripts": "1.0.12",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.3",
     "react-svg": "^2.1.21",
     "scrollreveal": "^3.3.6",
     "source-map-explorer": "^1.4.0",
@@ -29,5 +29,17 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

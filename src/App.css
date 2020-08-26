@@ -31,54 +31,6 @@ body {
   flex-direction: column;
 }
 
-.section {
-  position: relative;
-  padding-top: 15px;
-  padding-bottom: 30px;
-}
-
-.section .section-title {
-  margin-bottom: 18px;
-  color: white;
-}
-
-.section .section-title .title-icon {
-  margin-right: 20px;
-  color: #06a763;
-}
-
-.section .section-title img {
-  width: 66px;
-  padding: 10px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  margin: -2px 12px 12px 12px;
-}
-
-.container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1000px;
-  }
-}
-
 h1,
 h2,
 h3,
@@ -147,32 +99,4 @@ li {
 
 h6 {
   font-size: 1.4em;
-}
-
-.is-hidden {
-  visibility: hidden;
-}
-
-.btn {
-  padding-top: 8px;
-}
-
-.card {
-  position: relative;
-  background-color: #fff;
-  transition: box-shadow 0.25s;
-  -webkit-transition: box-shadow 0.25s;
-  border-radius: 0 !important;
-  margin: 8px 0;
-}
-
-.card .card-content {
-  padding: 40px;
-  border-radius: 0 0 2px 2px;
-}
-
-.card .card-content p {
-  margin: 0;
-  color: inherit;
-  text-align: center;
 }
