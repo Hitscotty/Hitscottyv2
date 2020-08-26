@@ -18,7 +18,7 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.3",
-    "react-svg": "^2.1.21",
+    "react-svg": "^2.2.18",
     "scrollreveal": "^3.3.6",
     "source-map-explorer": "^1.4.0",
     "styled-components": "^5.1.1",
